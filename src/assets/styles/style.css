@@ -1,0 +1,231 @@
+*
+{
+    font-family: sans-serif;
+}
+
+#todo-header
+{
+    color: rgb(48, 48, 48);
+}
+
+/* Todo Name */
+#todo-name
+{
+    border: 2px solid rgb(48, 48, 48);
+    font-size: 1.1rem;
+}
+
+/* Todo description */
+#todo-description
+{
+    border: 2px solid rgb(48, 48, 48);
+    font-size: 1.1rem;
+}
+
+/* Initial Todo Status */
+#status-select
+{
+    border: 2px solid rgb(48, 48, 48);
+    font-size: 1.1rem;
+}
+
+/* Add Todo Button */
+#add-todo-btn
+{
+    width: 100%;
+    font-size: 1.2rem !important;
+    background-color: rgb(0, 203, 0);
+    border: none;
+}
+
+#add-todo-btn:hover
+{
+    background-color: black;
+}
+
+/* My Todos Header */
+#mytodos-header
+{
+    color: rgb(48, 48, 48);
+    font-size: 1.5rem;
+}
+
+
+/* All status filter */
+#status-filter-header
+{
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+#all-status-filter
+{
+    width: 30%;
+    margin-left: 10px;
+    border: 2px solid rgb(48, 48, 48);
+    font-size: 1.1rem;
+}
+
+
+/* Todo Card */
+.card
+{
+    background-color: rgb(210, 245, 210);
+}
+
+.card-todo-name
+{
+    color: rgb(48, 48, 48);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.card-todo-description
+{
+    color: rgb(48, 48, 48);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.card-todo-status
+{
+    color: rgb(48, 48, 48);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Select Status Options */
+.card-status-selection
+{
+    margin-left: 5px;
+}
+
+.todo-success
+{
+    color: white;
+    cursor: pointer;
+    background-color: rgb(38, 174, 38);
+}
+
+.todo-danger
+{
+    color: white;
+    cursor: pointer;
+    background-color: rgb(239, 43, 43);
+}
+
+.card-edit-btn
+{
+    padding: 5px 23px;
+}
+
+.card-delete-btn
+{
+    padding: 5px 14px;
+}
+
+ @media screen and (max-width:576px) {
+    
+    #mytodos-header-area
+    {
+        display: flex;
+        justify-content: flex-start !important;
+        align-items: center;
+    }
+
+    #status-filter-area
+    {
+        display: flex;
+        justify-content: flex-start !important;
+        align-items: center;
+    }
+
+    #all-status-filter
+    {
+        width: 20%;
+        margin-left: 10px;
+        border: 2px solid rgb(48, 48, 48);
+        font-size: 1rem !important;
+    }
+} 
+
+@media screen and (max-width:768px) {
+    #add-todo-container
+    {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start !important; 
+    }
+
+    #add-todo-btn
+    {
+        width: 100% !important;
+        font-size: 1.1rem !important;
+        background-color: rgb(0, 203, 0);
+        border: none;
+        margin-bottom: 15px;
+    }
+
+    #status-filter-area
+    {
+        display: flex;
+        justify-content: flex-start !important;
+        align-items: center;
+    }
+
+    #all-status-filter
+    {
+        width: 60%;
+        margin-left: 10px;
+        border: 2px solid rgb(48, 48, 48);
+        font-size: 1.1rem;
+    }
+} 
+
+@media screen and (max-width:992px) {
+    #add-todo-container
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center !important;
+    }
+    #add-todo-btn
+    {
+        width: 20%;
+        font-size: 1.2rem !important;
+        background-color: rgb(0, 203, 0);
+        border: none;
+    }
+}
+
+@media screen and (max-width:1024px) {
+
+    #add-todo-container
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center !important;
+    }
+    #add-todo-btn
+    {
+        width: 20%;
+        font-size: 1.2rem !important;
+        background-color: rgb(0, 203, 0);
+        border: none;
+    }
+
+    #mytodos-header-area
+    {
+        display: flex;
+        justify-content: flex-start !important;
+        align-items: center;
+    }
+
+    #all-status-filter
+    {
+        width: 50%;
+        margin-left: 10px;
+        border: 2px solid rgb(48, 48, 48);
+        font-size: 1.1rem;
+    }
+}
