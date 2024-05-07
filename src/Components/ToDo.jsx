@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+// State variables
 export default function TodoApp() {
   const [todos, setTodos] = useState([]);
   const [taskName, setTaskName] = useState('');
@@ -8,6 +9,7 @@ export default function TodoApp() {
   const [filter, setFilter] = useState('all');
   const [editTodoId, setEditTodoId] = useState(null);
 
+  // Event handlers
   const handleTaskNameChange = (e) => {
     setTaskName(e.target.value);
   };
@@ -76,6 +78,7 @@ export default function TodoApp() {
     }
   };
 
+  // Filter todos based on selected filter option
   const filteredTodos = todos.filter(todo => {
     if (filter === 'completed') {
       return todo.status === 'completed';
@@ -87,7 +90,9 @@ export default function TodoApp() {
 
   return (
     <div className="container">
+      {/* Todo App Header */}
       <h1 className="my-4 text-center" id="todo-header">My Todo App</h1>
+      {/* Todo Input Form */}
       <div className="row mb-5">
         <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-3">
           <input type="text" className="form-control" id="todo-name" placeholder="Todo Name" value={taskName} onChange={handleTaskNameChange} />
@@ -106,6 +111,7 @@ export default function TodoApp() {
         </div>
       </div>
 
+      {/* Todo Filter Section */}
       <div className="row mb-3">
         <div className="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6" id="mytodos-header-area">
           <div id="mytodos-header">My Todos</div>
@@ -120,13 +126,17 @@ export default function TodoApp() {
         </div>
       </div>
 
+      {/* Todo List */}
       <div className="row">
         {filteredTodos.map(todo => (
           <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-3" key={todo.id}>
             <div className="card" id={`${todo.id}`}>
               <div className="card-body">
+                {/* Todo Name */}
                 <h5 className="card-title card-todo-name" id={`${todo.id}`}>Name : {todo.taskName}</h5>
+                {/* Todo Description */}
                 <p className="card-text card-todo-description" id={`${todo.id}`}>Description : {todo.description}</p>
+                {/* Todo Status */}
                 <p className="card-todo-status" id={`${todo.id}`}>Status :
                   <select className={`form-control-sm ${todo.status === 'completed' ? 'todo-success' : 'todo-danger'} card-status-selection`} id={`${todo.id}`}
                     value={todo.status} onChange={(e) => handleStatusChange(todo.id, e.target.value)}>
@@ -134,6 +144,7 @@ export default function TodoApp() {
                     <option value="completed">Completed</option>
                   </select>
                 </p>
+                {/* Edit and Delete Buttons */}
                 <div className="d-flex justify-content-end gap-3">
                   <button className="btn btn-success card-edit-btn" id={`${todo.id}`} onClick={() => handleEditTodo(todo.id)}>Edit</button>
                   <button className="btn btn-danger card-delete-btn" id={`${todo.id}`} onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
